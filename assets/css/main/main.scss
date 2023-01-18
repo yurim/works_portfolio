@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+@import "variable";
+@import "font";
+
+/* 공통*/
+section { height: 100vh; }
+/*해더*/
+.header_warp {  width: 100%; display: flex; justify-content: space-between; padding: 30px 30px 25px 30px;
+  .logo {
+    width: 40px; height: 40px; position: relative;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='none' viewBox='0 0 45 35'%3E%3Cdefs%3E%3Cpath id='reuse-0' fill='%23000' d='M5.646 15.441c-5.61 3.57-7.112 10.228-4.18 14.936 2.93 4.705 9.522 6.223 15.135 2.653 5.613-3.566 7.112-10.228 4.185-14.932-2.932-4.709-9.527-6.223-15.14-2.657Zm8.217 13.193c-7.6 4.828-10.348 4.26-12.056 1.525C.1 27.42.788 24.67 8.384 19.841c7.6-4.828 10.348-4.261 12.055-1.522 1.708 2.736 1.024 5.486-6.576 10.315Z'/%3E%3Cpath id='reuse-1' fill='%23000' d='M42.464 13.744v16.262c0 1.921.407 2.835 2.4 2.83H45v.369h-1.131c-1.315 0-2.22-.139-3.715-.139-1.495 0-2.399.139-3.714.139H35.31v-.368h.137c1.992 0 2.4-.913 2.4-2.835V13.811c0-1.408-.533-1.973-1.55-2.012-.721-.028-2.345.798-3.453 1.474-1.186.704-2.372 1.258-3.585 1.34a.16.16 0 0 0-.153.163v15.23c0 1.921.407 2.835 2.4 2.835h.137v.367H30.51c-1.315 0-2.22-.138-3.714-.138-1.495 0-2.4.139-3.715.139h-1.13v-.368h.136c1.992 0 2.4-.914 2.4-2.835L24.483 5.08c0-1.878-.407-2.792-2.4-2.792h-.136v-.367h.904c2.129 0 5.346-.78 5.933-1.922h.317v13.649c0 .083.063.154.145.158.904.04 2.243-.411 3.366-1.198l.044-.03c1.7-1.188 3.643-2.545 6.817-2.153 1.824.226 2.967.938 2.99 3.318Z'/%3E%3C/defs%3E%3Cuse xlink:href='%23reuse-0'/%3E%3Cuse xlink:href='%23reuse-1'/%3E%3Cuse xlink:href='%23reuse-0'/%3E%3Cuse xlink:href='%23reuse-1'/%3E%3C/svg%3E") no-repeat;
+  }
+  &::after {
+    content: ""; position: absolute; left: 35px; top: 30px; background: $color_red_E6; width: 8px; height: 8px; border-radius: 50%;
+    animation: bounce .45s cubic-bezier(.19,1,.22,1) infinite alternate;
+  }
+  .burger{ display: inline-flex; font-weight: bold; text-transform: uppercase;
+    svg.menu_burger {
+      display: inline-block; width: 40px; height: 20px; margin-right: 5px;
+    }
+   &:hover svg.menu_burger {
+     stroke-width: 2; stroke-dasharray: 55; animation: move_burger 1.05s cubic-bezier(.215,.61,.355,1)  forwards;
+     animation-iteration-count: 1;
+   }
+  }
+}
+.visual_cont { display: flex; flex-direction: column; max-width: 1200px; margin: 0 auto; padding: 0 20px;
+  font-family: 'July 01 Regular',sans-serif;
+  .visual_title { letter-spacing: -0.3vw; font-size: clamp(5rem, 19vw , 20rem);
+    &.bottom { display: flex; justify-content: space-between; flex-flow: row wrap; align-items: stretch;
+      em { position: relative; display: inline-flex; flex-grow: 1; align-items: end;
+        &::before { content: ""; width: auto; display: flex; flex-grow: 1; height: 1px; background: #000; margin: 5vw 1vw 5vw 3vw;
+        }
+      }
+   }
+  }
+  .visual_title_sub { text-align: right; font-weight: 600; font-size: clamp(0.5rem, 3vw , 2rem); font-family: "AppleSDGothicNeoR" ,sans-serif; text-transform: uppercase;
+  span { position: relative; padding: 10px;
+    .circle {
+      content: ""; position: absolute; left: 50%; top: calc(50% + 8px);
+      width: 100%; height: 100%;
+      //stroke-width: 1;
+      //transition-delay: 3.4s;
+      stroke-dasharray: 423;
+      //stroke-dashoffset: 423;
+      transform: translate(-50%,-50%) rotate(-180deg);
+      animation: dash 1s cubic-bezier(.405,.005,0,1);
+      animation-iteration-count: 1;
+    }
+  }
+  }
+}
+// 색션
+section { position: relative;
+  .info_wrap {  padding: 15vw 0;
+    .info_title { font-size: clamp(3rem, 6vw, 9rem); line-height: 1.5;
+      //font-family: " AppleSDGothicNeoH" ,sans-serif;
+      white-space: nowrap; overflow: hidden; word-break: keep-all;
+     position: absolute; top: clamp(-0.8rem, 6vw, -2rem); z-index: -1; opacity: 0.7;
+    }
+    .info_inner { position: relative; padding-top: 5vw; max-width: 1200px; margin: 0 auto;
+      .info_img { position: absolute;  left: 40px; bottom: 50px; width: 250px; height: 350px; border-radius: 10px;  border: 1px solid transparent; cursor: pointer;
+        &::after { content: '';
+          position: absolute; left: 0; top:0; width: 100%; height: 100%; border-radius: 10px; overflow: hidden; background-size: cover !important;
+          background: url("../images/portfolio_img.jpg") no-repeat; border: 1px solid $border_line;
+        }
+      }
+     .info_img:hover { border: 1px solid #c4c4c4;
+       &::after { animation: card 0.4s linear forwards; }
+     }
+      .info_txt { padding: 80px 20px 100px; border: 1px solid $border_line; border-radius: 20px; background: white; color: black;
+        p { max-width: 1200px; margin: 0 auto; font-size: clamp(1.5rem, 4vw, 2.4rem); line-height: 1.5; text-align: right; padding-bottom: 40px;}
+        P:last-of-type{ padding-bottom: 0; }
+      }
+    }
+  }
+}
+
+
+// 애니메이션
+@keyframes bounce {
+  0% { transform: translateY(3%) scaleY(.95);}
+  100% {transform: translateY(-30%) scaleY(1.05);}
+}
+
+@keyframes move_burger {
+  from  { stroke-dashoffset: 55; }
+   to{ stroke-dashoffset: 0; }
+}
+
+@keyframes dash {
+  0% { stroke-dashoffset: 423; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes card {
+  0% { transform: rotate(0deg); animation-timing-function: ease-out; }
+  100% { transform: rotate(-5deg) }
+}
