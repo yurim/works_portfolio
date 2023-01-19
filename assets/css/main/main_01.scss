@@ -7,7 +7,7 @@
   position: absolute; top: 0; left: 0; width: 100%; height: auto; fill: none;
   display: block; stroke: rgba($color_red_E6, 0.2); stroke-width: 0.5;
   stroke-dasharray: 1 4;
-  &.type_01 {  }
+  //&.type_01 {  }
 }
 // 커스텀 스크롤바
 body::-webkit-scrollbar { width: 6px; }
