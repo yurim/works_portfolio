@@ -196,11 +196,11 @@ section {
             transition: all .3s ease;
             background-size: 100% !important; }
           section .info_wrap .info_inner .info_img .img_box::before {
-            background: white url("../../images/portfolio_img_01_01.png") no-repeat;
+            background: white url("../../images/portfolio_img_01.png") no-repeat;
             z-index: 3;
             opacity: 1; }
           section .info_wrap .info_inner .info_img .img_box::after {
-            background: white url("../../images/portfolio_img_02_02.png") no-repeat;
+            background: white url("../../images/portfolio_img_02.png") no-repeat;
             z-index: 2;
             opacity: 0; }
           section .info_wrap .info_inner .info_img .img_box:hover::before {

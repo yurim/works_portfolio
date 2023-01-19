@@ -37,16 +37,6 @@
   .bg.type_01 {
     stroke: rgba(190, 5, 25, 0.7); }
 
-.blob {
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  background-color: #00152b; }
-
 body::-webkit-scrollbar {
   width: 6px; }
 
@@ -206,11 +196,11 @@ section {
             transition: all .3s ease;
             background-size: 100% !important; }
           section .info_wrap .info_inner .info_img .img_box::before {
-            background: white url("../../images/portfolio_img_01_01.png") no-repeat;
+            background: white url("../images/portfolio_img_01.png") no-repeat;
             z-index: 3;
             opacity: 1; }
           section .info_wrap .info_inner .info_img .img_box::after {
-            background: white url("../../images/portfolio_img_02_02.png") no-repeat;
+            background: white url("../images/portfolio_img_02.png") no-repeat;
             z-index: 2;
             opacity: 0; }
           section .info_wrap .info_inner .info_img .img_box:hover::before {
@@ -243,15 +233,5 @@ section {
     stroke-dashoffset: 423; }
   100% {
     stroke-dashoffset: 0; } }
-@keyframes shape1 {
-  0% {
-    transform: translateY(0) rotate(0deg); }
-  100% {
-    transform: translateY(20%) rotate(20deg); } }
-@keyframes shape2 {
-  0% {
-    transform: translateY(0) rotate(15deg); }
-  100% {
-    transform: translateY(-20%) rotate(25deg); } }
 
 /*# sourceMappingURL=layout.css.map */
