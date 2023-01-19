@@ -9,7 +9,12 @@
   display: block; stroke: rgba($color_red_E6, 0.2); stroke-width: 0.5; stroke-dasharray: 1 4;
   &.type_01 { stroke: rgba($color_red_E6, 0.7); }
 }
-
+.line {
+  position: absolute;  height: auto;  stroke-width: 0.5; display: block;
+  &.type_01 {
+    width: 150px; left: calc(50% + 300px); bottom: calc(50% - 150px); transform: translate(-50%, -50%) rotate(345deg);
+  }
+}
 // 커스텀 스크롤바
 body::-webkit-scrollbar { width: 6px; }
 body::-webkit-scrollbar-thumb { height: 30%; background: rgba($color_red_E6, 1); }

@@ -37,6 +37,17 @@
   .bg.type_01 {
     stroke: rgba(190, 5, 25, 0.7); }
 
+.line {
+  position: absolute;
+  height: auto;
+  stroke-width: 0.5;
+  display: block; }
+  .line.type_01 {
+    width: 150px;
+    left: calc(50% + 300px);
+    bottom: calc(50% - 150px);
+    transform: translate(-50%, -50%) rotate(345deg); }
+
 body::-webkit-scrollbar {
   width: 6px; }
 
